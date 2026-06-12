@@ -8,6 +8,7 @@ export type Project = {
   technologies: string[];
   status: "Concluído" | "Em evolução" | "Pesquisa";
   github?: string;
+  website?: string;
   featured?: boolean;
   visual: "firewall" | "evoluzione";
 };
@@ -44,6 +45,7 @@ export const projects: Project[] = [
       "Responsive Design",
     ],
     status: "Em evolução",
+    website: "https://evoluzione-site.vercel.app/",
     featured: true,
     visual: "evoluzione",
   },

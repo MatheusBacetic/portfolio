@@ -44,7 +44,12 @@ export function ProjectCard({
                 <li key={technology}>{technology}</li>
               ))}
             </ul>
-            {project.github ? (
+            {project.website ? (
+              <a href={project.website} aria-label={`Acessar ${project.title}`}>
+                Acessar projeto
+                <ArrowUpRight />
+              </a>
+            ) : project.github ? (
               <a href={project.github} aria-label={`Ver ${project.title} no GitHub`}>
                 <Github />
                 Repositório
