@@ -10,7 +10,7 @@ export type Project = {
   github?: string;
   website?: string;
   featured?: boolean;
-  visual: "firewall" | "evoluzione";
+  visual: "firewall" | "evoluzione" | "honeypot";
 };
 
 export const profile = {
@@ -50,6 +50,31 @@ export const projects: Project[] = [
     visual: "evoluzione",
   },
   {
+    title: "SSH Honeypot + IDS",
+    slug: "honeypot-ids",
+    category: "Cyber Security / C / Intrusion Detection",
+    description:
+      "Honeypot SSH desenvolvido em C para Linux, com captura de conexões, registro de eventos e um mecanismo básico de detecção de intrusão. Ao identificar tentativas recorrentes de acesso, o sistema gera alertas e automatiza o bloqueio do endereço de origem via nftables.",
+    problem:
+      "Observar tentativas de acesso malicioso em um ambiente controlado e transformar sinais de brute force em uma resposta defensiva automática, conectando monitoramento, análise e contenção.",
+    learning:
+      "Programação de baixo nível em C, sockets TCP/IP, organização modular, logging de eventos, contagem de tentativas por IP, detecção de brute force e integração entre uma aplicação Linux e regras dinâmicas do nftables.",
+    technologies: [
+      "C",
+      "Linux",
+      "Sockets TCP/IP",
+      "nftables",
+      "GCC",
+      "Make",
+      "IDS",
+    ],
+    status: "Concluído",
+    github:
+      "https://github.com/MatheusBacetic/cyber-security/tree/main/honeypot-ids",
+    featured: true,
+    visual: "honeypot",
+  },
+  {
     title: "Servidor Nginx com Firewall Stateful",
     slug: "server-nginx-firewall",
     category: "Linux / Network Security / Web Security",
@@ -76,6 +101,14 @@ export const projects: Project[] = [
 ];
 
 export const repositories = [
+  {
+    name: "honeypot-ids",
+    description:
+      "Honeypot SSH em C com logging, detecção de brute force e bloqueio automático de IPs via nftables.",
+    language: "C",
+    label: "Intrusion Detection",
+    url: "https://github.com/MatheusBacetic/cyber-security/tree/main/honeypot-ids",
+  },
   {
     name: "serverNginx-firewall",
     description:

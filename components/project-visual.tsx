@@ -61,9 +61,30 @@ const evoluzioneScreenshots = [
   },
 ];
 
+const honeypotScreenshots = [
+  {
+    src: "/projects/honeypot-ids/honey.png",
+    alt: "Honeypot detectando brute force e bloqueando o IP atacante",
+    label: "detecção e resposta",
+  },
+  {
+    src: "/projects/honeypot-ids/honey2.png",
+    alt: "Alertas do IDS e endereço malicioso inserido na blacklist",
+    label: "alertas e blacklist",
+  },
+  {
+    src: "/projects/honeypot-ids/honey3.png",
+    alt: "Ruleset nftables com a chain do honeypot e o IP bloqueado",
+    label: "nftables ruleset",
+  },
+];
+
 export function ProjectVisual({ type }: { type: Project["visual"] }) {
-  const screenshots =
-    type === "evoluzione" ? evoluzioneScreenshots : firewallScreenshots;
+  const screenshots = {
+    evoluzione: evoluzioneScreenshots,
+    firewall: firewallScreenshots,
+    honeypot: honeypotScreenshots,
+  }[type];
   const screenshotCount = screenshots.length;
   const [activeIndex, setActiveIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
