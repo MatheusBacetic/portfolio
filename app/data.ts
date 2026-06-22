@@ -10,7 +10,7 @@ export type Project = {
   github?: string;
   website?: string;
   featured?: boolean;
-  visual: "firewall" | "evoluzione" | "honeypot";
+  visual: "firewall" | "evoluzione" | "honeypot" | "active-directory" | "ad-monitor";
 };
 
 export const profile = {
@@ -24,6 +24,56 @@ export const profile = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "AD Security Monitor",
+    slug: "ad-security-monitor",
+    category: "Blue Team / Detection Engineering / Active Directory",
+    description:
+      "Monitor defensivo para Active Directory que acompanha o Windows Security Event Log em tempo real, correlaciona sessões por Logon ID e IP de origem e transforma eventos dispersos em alertas e incidentes contextualizados.",
+    problem:
+      "Eventos isolados do Windows geram muito ruído e oferecem pouco contexto operacional. O monitor reúne autenticação, Kerberos, LDAP, grupos privilegiados e acessos SMB para identificar padrões suspeitos sem depender da análise manual de cada registro.",
+    learning:
+      "Engenharia de detecção, parsing do Windows Event Log, correlação temporal, Risk Score por usuário, detecção de Kerberoasting e password spraying, rotação de logs e desenho seguro de resposta automática com quarentena em modo dry run.",
+    technologies: [
+      "Python",
+      "PowerShell",
+      "Active Directory",
+      "Windows Event Log",
+      "Kerberos",
+      "Detection Engineering",
+      "Blue Team",
+    ],
+    status: "Concluído",
+    github:
+      "https://github.com/MatheusBacetic/cyber-security/tree/main/ad-security-monitor",
+    featured: true,
+    visual: "ad-monitor",
+  },
+  {
+    title: "Active Directory Security Lab",
+    slug: "active-directory-security-lab",
+    category: "Windows Security / Identity / Active Directory",
+    description:
+      "Laboratório corporativo em Windows Server 2022 para estudar a administração e a segurança de identidades. O domínio treino.local conecta usuários, grupos, estações, contas de serviço e compartilhamentos em uma estrutura controlada e auditável.",
+    problem:
+      "Compreender como autenticação, permissões e políticas se relacionam em um domínio real — e como configurações legítimas podem formar caminhos de ataque quando privilégios, delegações e contas de serviço não são acompanhados de perto.",
+    learning:
+      "Arquitetura do AD DS, autenticação Kerberos, SPNs, delegação de permissões, GPOs, controle de acesso por grupos, compartilhamentos SMB, políticas de bloqueio, auditoria com Windows Event Logs e análise de relações com BloodHound CE.",
+    technologies: [
+      "Windows Server 2022",
+      "Active Directory",
+      "Kerberos",
+      "GPO",
+      "PowerShell",
+      "BloodHound CE",
+      "Windows Event Logs",
+    ],
+    status: "Concluído",
+    github:
+      "https://github.com/MatheusBacetic/cyber-security/tree/main/active-directory-security-lab",
+    featured: true,
+    visual: "active-directory",
+  },
   {
     title: "Evoluzione",
     slug: "evoluzione",

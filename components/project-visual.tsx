@@ -79,8 +79,46 @@ const honeypotScreenshots = [
   },
 ];
 
+const activeDirectoryScreenshots = [
+  {
+    src: "/projects/active-directory/domain-structure.png",
+    alt: "Estrutura de unidades organizacionais do domínio treino.local",
+    label: "estrutura do domínio",
+  },
+  {
+    src: "/projects/active-directory/kerberos-klist.png",
+    alt: "Validação de tickets Kerberos com o comando klist",
+    label: "tickets kerberos",
+  },
+  {
+    src: "/projects/active-directory/audit-4738.png",
+    alt: "Auditoria de alteração de conta no Windows Event Viewer",
+    label: "auditoria de eventos",
+  },
+  {
+    src: "/projects/active-directory/bloodhound-overview.png",
+    alt: "Visão geral do domínio coletado no BloodHound CE",
+    label: "bloodhound overview",
+  },
+  {
+    src: "/projects/active-directory/bloodhound-service-account.png",
+    alt: "Análise de relacionamentos de contas de serviço no BloodHound CE",
+    label: "service accounts",
+  },
+];
+
+const adMonitorScreenshots = [
+  {
+    src: "/projects/ad-monitor/tests.png",
+    alt: "Execução dos testes controlados do AD Security Monitor",
+    label: "cenários de teste",
+  },
+];
+
 export function ProjectVisual({ type }: { type: Project["visual"] }) {
   const screenshots = {
+    "ad-monitor": adMonitorScreenshots,
+    "active-directory": activeDirectoryScreenshots,
     evoluzione: evoluzioneScreenshots,
     firewall: firewallScreenshots,
     honeypot: honeypotScreenshots,
