@@ -50,7 +50,12 @@ export function ProjectCard({
                 <ArrowUpRight />
               </a>
             ) : project.github ? (
-              <a href={project.github} aria-label={`Ver ${project.title} no GitHub`}>
+              <a
+                href={project.github}
+                aria-label={`Ver ${project.title} no GitHub`}
+                target={project.repositoryNewTab ? "_blank" : undefined}
+                rel={project.repositoryNewTab ? "noopener noreferrer" : undefined}
+              >
                 <Github />
                 Repositório
                 <ArrowUpRight />

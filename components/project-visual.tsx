@@ -115,10 +115,34 @@ const adMonitorScreenshots = [
   },
 ];
 
+const cloudSecurityScreenshots = [
+  {
+    src: "/projects/cloud-security/architecture-diagram.png",
+    alt: "Diagrama da arquitetura de segurança e monitoramento do laboratório AWS",
+    label: "arquitetura de segurança",
+  },
+  {
+    src: "/projects/cloud-security/rule-awsConfig.png",
+    alt: "Regras de conformidade avaliadas pelo AWS Config",
+    label: "compliance aws config",
+  },
+  {
+    src: "/projects/cloud-security/alarm-cloudwatch.png",
+    alt: "Alarme de utilização de CPU configurado no Amazon CloudWatch",
+    label: "alarme cloudwatch",
+  },
+  {
+    src: "/projects/cloud-security/IR-002-01-inspector-permission-denied.png",
+    alt: "Falha de ativação do Amazon Inspector por restrição de permissão IAM",
+    label: "restrição iam investigada",
+  },
+];
+
 export function ProjectVisual({ type }: { type: Project["visual"] }) {
   const screenshots = {
     "ad-monitor": adMonitorScreenshots,
     "active-directory": activeDirectoryScreenshots,
+    "cloud-security": cloudSecurityScreenshots,
     evoluzione: evoluzioneScreenshots,
     firewall: firewallScreenshots,
     honeypot: honeypotScreenshots,

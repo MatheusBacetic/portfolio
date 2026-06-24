@@ -8,9 +8,10 @@ export type Project = {
   technologies: string[];
   status: "Concluído" | "Em evolução" | "Pesquisa";
   github?: string;
+  repositoryNewTab?: boolean;
   website?: string;
   featured?: boolean;
-  visual: "firewall" | "evoluzione" | "honeypot" | "active-directory" | "ad-monitor";
+  visual: "firewall" | "evoluzione" | "honeypot" | "active-directory" | "ad-monitor" | "cloud-security";
 };
 
 export const profile = {
@@ -24,6 +25,34 @@ export const profile = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "Cloud Security Lab AWS",
+    slug: "cloud-security-lab-aws",
+    category: "Cloud Security / AWS / Monitoring & Compliance",
+    description:
+      "Laboratório prático de Cloud Security desenvolvido na AWS Academy, com uma instância EC2 Ubuntu executando Nginx e controles de segurança, monitoramento, compliance, auditoria e detecção de ameaças. O ambiente utiliza Security Groups, CloudWatch, SNS, AWS Config, CloudTrail, S3, GuardDuty e Security Hub.",
+    problem:
+      "Construir visibilidade e controle de segurança sobre uma infraestrutura cloud, reduzindo sua superfície de exposição, monitorando eventos e avaliando sua conformidade. O projeto também exigiu investigar falhas causadas pelas restrições de IAM do AWS Academy e documentar findings e riscos residuais.",
+    learning:
+      "Arquitetura e segurança na AWS, hardening de EC2, Security Groups, monitoramento com CloudWatch e SNS, compliance com AWS Config, auditoria com CloudTrail, detecção de ameaças com GuardDuty e Security Hub, gestão de riscos e documentação de resposta a incidentes.",
+    technologies: [
+      "AWS",
+      "Cloud Security",
+      "EC2",
+      "CloudWatch",
+      "AWS Config",
+      "CloudTrail",
+      "GuardDuty",
+      "Security Hub",
+      "Incident Response",
+    ],
+    status: "Concluído",
+    github:
+      "https://github.com/MatheusBacetic/cyber-security/tree/main/cloud-cyber",
+    repositoryNewTab: true,
+    featured: true,
+    visual: "cloud-security",
+  },
   {
     title: "AD Security Monitor",
     slug: "ad-security-monitor",
