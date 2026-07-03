@@ -1,5 +1,5 @@
 import { ArrowUpRight, Github, Linkedin, Mail } from "@/components/icons";
-import { ProjectCard } from "@/components/project-card";
+import { ProjectsCarousel } from "@/components/projects-carousel";
 import { Reveal } from "@/components/reveal";
 import { Terminal } from "@/components/terminal";
 import { profile, projects, repositories } from "./data";
@@ -106,15 +106,7 @@ export default function Home() {
           </p>
         </Reveal>
 
-        <div className="project-list">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.slug}
-              project={project}
-              index={index}
-            />
-          ))}
-        </div>
+        <ProjectsCarousel projects={projects} />
       </section>
 
       <section className="github-section shell" id="github">

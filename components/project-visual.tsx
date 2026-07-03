@@ -138,6 +138,44 @@ const cloudSecurityScreenshots = [
   },
 ];
 
+const socLabScreenshots = [
+  {
+    src: "/projects/soc-lab/wazuh-alert-100240.png",
+    alt: "Alerta SIEM nível 12 no Wazuh gerado por regra customizada do SOC Home Lab",
+    label: "alerta siem nivel 12",
+  },
+  {
+    src: "/projects/soc-lab/dash.png",
+    alt: "Dashboard Wazuh com visão operacional dos eventos do SOC Home Lab",
+    label: "wazuh dashboard",
+  },
+  {
+    src: "/projects/soc-lab/dash2.png",
+    alt: "Painel Wazuh para investigação e threat hunting em logs centralizados",
+    label: "threat hunting",
+  },
+  {
+    src: "/projects/soc-lab/dash3.png",
+    alt: "Arquitetura e alertas do laboratório SOC com Wazuh, Windows, Linux e honeypot",
+    label: "arquitetura soc",
+  },
+  {
+    src: "/projects/soc-lab/kali-blocked.png",
+    alt: "IP atacante bloqueado via nftables após alerta do honeypot integrado ao Wazuh",
+    label: "active response",
+  },
+  {
+    src: "/projects/soc-lab/Process%20Investigation.png",
+    alt: "Investigação de processo e evento coletado no ambiente SOC Home Lab",
+    label: "process investigation",
+  },
+  {
+    src: "/projects/soc-lab/01-windows-server-agent-active.png",
+    alt: "Wazuh Agent ativo no Windows Server do laboratório SOC",
+    label: "windows agent ativo",
+  },
+];
+
 export function ProjectVisual({ type }: { type: Project["visual"] }) {
   const screenshots = {
     "ad-monitor": adMonitorScreenshots,
@@ -146,6 +184,7 @@ export function ProjectVisual({ type }: { type: Project["visual"] }) {
     evoluzione: evoluzioneScreenshots,
     firewall: firewallScreenshots,
     honeypot: honeypotScreenshots,
+    "soc-lab": socLabScreenshots,
   }[type];
   const screenshotCount = screenshots.length;
   const [activeIndex, setActiveIndex] = useState(0);

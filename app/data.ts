@@ -11,7 +11,7 @@ export type Project = {
   repositoryNewTab?: boolean;
   website?: string;
   featured?: boolean;
-  visual: "firewall" | "evoluzione" | "honeypot" | "active-directory" | "ad-monitor" | "cloud-security";
+  visual: "firewall" | "evoluzione" | "honeypot" | "active-directory" | "ad-monitor" | "cloud-security" | "soc-lab";
 };
 
 export const profile = {
@@ -52,6 +52,37 @@ export const projects: Project[] = [
     repositoryNewTab: true,
     featured: true,
     visual: "cloud-security",
+  },
+  {
+    title: "SOC Home Lab",
+    slug: "soc-home-lab",
+    category: "Cyber Security / SOC / SIEM / Detection Engineering",
+    description:
+      "Laboratório SOC isolado construído para praticar coleta centralizada de logs, detecção de ameaças, threat hunting, resposta ativa e investigação de incidentes com Wazuh, Sysmon, Active Directory, Linux e Kali Linux.",
+    problem:
+      "Entender SIEM apenas pela teoria não demonstra como eventos de diferentes endpoints são coletados, correlacionados, investigados e transformados em alertas acionáveis dentro de uma operação de segurança.",
+    learning:
+      "Construção de um fluxo SOC completo com Wazuh, Sysmon, regras customizadas, MITRE ATT&CK, investigação em logs brutos, Active Response com nftables e integração de ferramentas próprias ao SIEM.",
+    technologies: [
+      "Wazuh",
+      "SIEM",
+      "Sysmon",
+      "MITRE ATT&CK",
+      "Threat Hunting",
+      "Blue Team",
+      "Active Directory",
+      "Linux",
+      "nftables",
+      "Python",
+      "C",
+      "Detection Engineering",
+    ],
+    status: "Concluído",
+    github:
+      "https://github.com/MatheusBacetic/cyber-security/tree/main/soc-homelab",
+    repositoryNewTab: true,
+    featured: true,
+    visual: "soc-lab",
   },
   {
     title: "AD Security Monitor",
